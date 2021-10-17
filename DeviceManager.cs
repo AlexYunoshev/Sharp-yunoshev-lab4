@@ -54,7 +54,6 @@ namespace yunoshev_lab4
         {
             while (true)
             {
-                //Console.WriteLine(System.lineSeparator().repeat(50));
                 Console.WriteLine(device.GetFullProductDescription());
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Включить/выключить");
@@ -178,7 +177,6 @@ namespace yunoshev_lab4
         {
             while (true)
             {
-                //Console.WriteLine(System.lineSeparator().repeat(50));
                 Console.WriteLine(device.GetFullProductDescription());
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Включить/выключить");
@@ -325,7 +323,6 @@ namespace yunoshev_lab4
         {
             while (true)
             {
-                //Console.WriteLine(System.lineSeparator().repeat(50));
                 Console.WriteLine(device.GetFullProductDescription());
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Включить/выключить подсветку");
@@ -392,7 +389,6 @@ namespace yunoshev_lab4
         {
             while (true)
             {
-                //Console.WriteLine(System.lineSeparator().repeat(50));
                 Console.WriteLine(device.GetFullProductDescription());
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Включить/выключить");
@@ -461,7 +457,6 @@ namespace yunoshev_lab4
         {
             while (true)
             {
-                //Console.WriteLine(System.lineSeparator().repeat(50));
                 Console.WriteLine(device.GetFullProductDescription());
                 Console.WriteLine("Выберите действие: ");
                 Console.WriteLine("1 - Включить/выключить");
@@ -606,16 +601,13 @@ namespace yunoshev_lab4
         }
 
 
-        //public static <T extends Device> T ChooseDevice() {
         public static Device.Device ChooseDevice()
         {
             int devicePosition;
-            //Console.WriteLine(System.lineSeparator().repeat(50));
             PrintDeviceTypeChoosing();
             switch (Convert.ToInt32(Console.ReadLine()))
             {
                 case 1:
-                    //Console.WriteLine(System.lineSeparator().repeat(50));
                     if (ACList.Count > 0)
                     {
                         PrintDeviceList(ACList);
@@ -626,7 +618,6 @@ namespace yunoshev_lab4
                     return null;
 
                 case 2:
-                    //Console.WriteLine(System.lineSeparator().repeat(50));
                     if (breadMakersList.Count > 0)
                     {
                         PrintDeviceList(breadMakersList);
@@ -637,7 +628,6 @@ namespace yunoshev_lab4
                     return null;
 
                 case 3:
-                    //Console.WriteLine(System.lineSeparator().repeat(50));
                     if (hoodList.Count > 0)
                     {
                         PrintDeviceList(hoodList);
@@ -648,7 +638,6 @@ namespace yunoshev_lab4
                     return null;
 
                 case 4:
-                    //Console.WriteLine(System.lineSeparator().repeat(50));
                     if (radioList.Count > 0)
                     {
                         PrintDeviceList(radioList);
@@ -659,7 +648,6 @@ namespace yunoshev_lab4
                     return null;
 
                 case 5:
-                    //Console.WriteLine(System.lineSeparator().repeat(50));
                     if (TVList.Count > 0)
                     {
                         PrintDeviceList(TVList);
@@ -678,15 +666,15 @@ namespace yunoshev_lab4
         {
             ACList.Add(new AirConditioner("AC serial 1", "Cooper Hunter", "Prima Plus"));
             ACList.Add(new AirConditioner("AC serial 2", "Cooper Hunter", "Winner"));
-            //ACList.Add(new AirConditioner("AC serial 3", "NeoClima", "Therminator"));
-            //ACList.Add(new AirConditioner("AC serial 4", "Mitsubishi", "Classic MS-GF60"));
-            //ACList.Add(new AirConditioner("AC serial 5", "Midea", "Ultimate Comfort"));
+            ACList.Add(new AirConditioner("AC serial 3", "NeoClima", "Therminator"));
+            ACList.Add(new AirConditioner("AC serial 4", "Mitsubishi", "Classic MS-GF60"));
+            ACList.Add(new AirConditioner("AC serial 5", "Midea", "Ultimate Comfort"));
 
             breadMakersList.Add(new BreadMaker.BreadMaker("BreadMaker serial 1", "Gorenje", "BM1400E"));
             breadMakersList.Add(new BreadMaker.BreadMaker("BreadMaker serial 2", "Gorenje", "BM1600WG"));
-            //breadMakersList.Add(new BreadMaker("BreadMaker serial 3", "Panasonic", "SD-2510"));
+            breadMakersList.Add(new BreadMaker.BreadMaker("BreadMaker serial 3", "Panasonic", "SD-2510"));
 
-            //hoodList.Add(new Hood("Hood serial 1", "Vitek", "VM-03"));
+            hoodList.Add(new Hood("Hood serial 1", "Vitek", "VM-03"));
 
             radioList.Add(new Radio.Radio("Radio serial 1", "Philips", "Virtual50"));
 
@@ -695,7 +683,6 @@ namespace yunoshev_lab4
 
         public static AirConditioner CreateAC()
         {
-            Console.ReadLine();
             Console.WriteLine("Введите производителя кондиционера: ");
             manufacturer = Console.ReadLine();
             Console.WriteLine("Введите модель кондиционера: ");
@@ -707,7 +694,6 @@ namespace yunoshev_lab4
 
         public static BreadMaker.BreadMaker CreateBreadMaker()
         {
-            Console.ReadLine();
             Console.WriteLine("Введите производителя хлебопечки: ");
             manufacturer = Console.ReadLine();
             Console.WriteLine("Введите модель хлебопечки: ");
@@ -719,7 +705,6 @@ namespace yunoshev_lab4
 
         public static Hood CreateKitchenHood()
         {
-            Console.ReadLine();
             Console.WriteLine("Введите производителя вытяжки: ");
             manufacturer = Console.ReadLine();
             Console.WriteLine("Введите модель вытяжки: ");
@@ -731,7 +716,6 @@ namespace yunoshev_lab4
 
         public static Radio.Radio CreateRadio()
         {
-            Console.ReadLine();
             Console.WriteLine("Введите производителя радио: ");
             manufacturer = Console.ReadLine();
             Console.WriteLine("Введите модель радио: ");
@@ -743,7 +727,6 @@ namespace yunoshev_lab4
 
         public static TV.TV CreateTV()
         {
-            Console.ReadLine();
             Console.WriteLine("Введите производителя телевизора: ");
             manufacturer = Console.ReadLine();
             Console.WriteLine("Введите модель телевизора: ");
