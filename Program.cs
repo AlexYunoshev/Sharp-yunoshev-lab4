@@ -11,18 +11,19 @@ namespace yunoshev_lab4
         ///////////////////////////////////////// Check RunTime  /////////////////////////////////////
         static void Main(string[] args)
         {
+            Console.WriteLine("Start program");
             stopWatch.Start();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10000; i++)
                 DeviceManager.CreateDevices();
 
-            for (int i = 0; i < 100; i++)
-            {
-                DeviceManager.PrintDeviceList(DeviceManager.ACList);
-                DeviceManager.PrintDeviceList(DeviceManager.breadMakersList);
-                DeviceManager.PrintDeviceList(DeviceManager.hoodList);
-                DeviceManager.PrintDeviceList(DeviceManager.radioList);
-                DeviceManager.PrintDeviceList(DeviceManager.TVList);
-            }
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    DeviceManager.PrintDeviceList(DeviceManager.ACList);
+            //    DeviceManager.PrintDeviceList(DeviceManager.breadMakersList);
+            //    DeviceManager.PrintDeviceList(DeviceManager.hoodList);
+            //    DeviceManager.PrintDeviceList(DeviceManager.radioList);
+            //    DeviceManager.PrintDeviceList(DeviceManager.TVList);
+            //}
                 
 
             stopWatch.Stop();
@@ -30,7 +31,9 @@ namespace yunoshev_lab4
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
             ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds);
+            string elapsedTime2 = ts.TotalMilliseconds.ToString();
             Console.WriteLine("RunTime (h:m:s:ms) " + elapsedTime);
+            Console.WriteLine("RunTime (h:m:s:ms) " + elapsedTime2);
         }
 
 

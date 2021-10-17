@@ -6,4 +6,8 @@
     <RootNamespace>yunoshev_lab4</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
