@@ -11,19 +11,20 @@ namespace yunoshev_lab4
         ///////////////////////////////////////// Check RunTime  /////////////////////////////////////
         static void Main(string[] args)
         {
+            //for (int i = 0; i < 10000; i++)
+            DeviceManager.CreateDevices();
+
             Console.WriteLine("Start program");
             stopWatch.Start();
-            for (int i = 0; i < 10000; i++)
-                DeviceManager.CreateDevices();
-
-            //for (int i = 0; i < 100; i++)
-            //{
-            //    DeviceManager.PrintDeviceList(DeviceManager.ACList);
-            //    DeviceManager.PrintDeviceList(DeviceManager.breadMakersList);
-            //    DeviceManager.PrintDeviceList(DeviceManager.hoodList);
-            //    DeviceManager.PrintDeviceList(DeviceManager.radioList);
-            //    DeviceManager.PrintDeviceList(DeviceManager.TVList);
-            //}
+            
+            for (int i = 0; i < 100; i++)
+            {
+               DeviceManager.PrintDeviceList(DeviceManager.ACList);
+               DeviceManager.PrintDeviceList(DeviceManager.breadMakersList);
+               DeviceManager.PrintDeviceList(DeviceManager.hoodList);
+               DeviceManager.PrintDeviceList(DeviceManager.radioList);
+               DeviceManager.PrintDeviceList(DeviceManager.TVList);
+            }
                 
 
             stopWatch.Stop();
